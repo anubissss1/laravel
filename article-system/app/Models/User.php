@@ -29,13 +29,4 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-    public function articles(){
-        return $this->hasMany(Article::class);
-    }
-    public function isUser(){
-        return $this->role === 'user';
-    }
-    public function isModerator(){
-        return $this->role === 'moderator';
-    }
 }
