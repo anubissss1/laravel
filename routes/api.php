@@ -20,4 +20,5 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // Categories by product
     Route::get('/products/{productId}/categories', [CategoryController::class, 'productCategories']);
-});
+    })
+;

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\AuthorController;
 
 
 Route::get('/', function () {
@@ -11,3 +12,5 @@ Route::get('/', function () {
 Route::middleware(['auth'])->group(function (){
     Route::resource('articles',ArticleController::class);
 });
+
+Route::post('/authors',[AuthorController::class,'store']);
